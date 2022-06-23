@@ -30,21 +30,13 @@ function getMenuChoice() {
 
 }
 
-function add(a, b) {
-  return a + b;
-}
+const add = (a, b) => a + b;
 
-function Subtract(a, b) {
-  return a - b;
-}
+const subtract = (a, b) => a - b;
 
-function divide(a, b) {
-  return a / b;
-}
+const divide = (a, b) => a / b;
 
-function modulo(a, b) {
-  return a % b;
-}
+const multiply = (a, b) => a * b;
 
 function get_operands() {
     let num1 = parseInt(prompt("Enter a number:"))
@@ -62,7 +54,18 @@ while(choice != QUIT) {
         let [num1, num2] = get_operands();
         let answer = add(num1, num2);
         alert(`${num1} + ${num2} = ${answer}`)
-        
+    } else if (choice === SUBTRACT) {
+        let [num1, num2] = get_operands();
+        let answer = subtract(num1, num2);
+        alert(`${num1} - ${num2} = ${answer}`)
+    } else if (choice === DIVIDE) {
+        let [num1, num2] = get_operands();
+        let answer = divide(num1, num2);
+        alert(`${num1} / ${num2} = ${answer}`)
+    } else if (choice === MULTIPLY) {
+        let [num1, num2] = get_operands();
+        let answer = multiply(num1, num2);
+        alert(`${num1} * ${num2} = ${answer}`)
     }
 }
 
